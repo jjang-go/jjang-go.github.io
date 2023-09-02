@@ -13,15 +13,15 @@ mermaid: true
 
 # OCI Foundations Associate (2023) 후기
 
-우연히 회사에서 OCI 자격증들 무료로 하고 있다는 말을 최근에 들어서
+우연히 회사에서 OCI 자격증들 무료로 하고 있다는 말을 최근에 들어서<br>
 
-알아보고 응시해봤어요. 우선 OCI자격증은 아래와 같이 3단계가 있는듯하네요.
+알아보고 응시해봤어요. 우선 OCI자격증은 아래와 같이 3단계가 있는듯하네요.<br>
 
-![Foundations_Associate](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Foundations_Associate.png?raw=true)
+![Foundations_Associate](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Foundations_Associate.png?raw=true)<br>
 
-![Associate](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Associate.png?raw=true)
+![Associate](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Associate.png?raw=true)<br>
 
-![Professional](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Professional.png?raw=true)
+![Professional](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Professional.png?raw=true)<br>
 
 저는 순서대로 하기 위해 **Foundations Associate**을 먼저 응시했어요.
 
