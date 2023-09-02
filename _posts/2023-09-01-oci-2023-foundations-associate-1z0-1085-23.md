@@ -17,9 +17,9 @@ mermaid: true
 
 알아보고 응시해봤어요. 우선 OCI자격증은 아래와 같이 3단계가 있는듯하네요.
 
-![Foundations_Associate](assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Foundations_Associate.png){: width="350" class="normal"}
-![Associate](assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Associate.png)
-![Professional](assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Professional.png)
+![Foundations_Associate](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Foundations_Associate.png?raw=true)
+![Associate](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Associate.png?raw=true)
+![Professional](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Professional.png?raw=true)
 
 저는 순서대로 하기 위해 **Foundations Associate**을 먼저 응시했어요.
 
@@ -29,9 +29,9 @@ OCI에선 해당 자격증과 관련한 영상을 제공해주고 있으며, 중
 
 시험은 35문제 중 60% 이상 맞출 시 시험이 통과에요.
 
-![s](assets/img/post/oci-2023-foundations-associate-1z0-1085-23/s.png)
+![s](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/s.png?raw=true)
 
-![oci](assets/img/post/oci-2023-foundations-associate-1z0-1085-23/oci.png)
+![oci](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/oci.png?raw=true)
 
 통과하면 이메일을 통해 합격 축하 소식과 자격증 저장 및 공유 방법을 알려주는 이메일이 2,3개 정도 오는데 다소 시간이 좀 걸리니 다른 거 하다가 저장하면 됩니다.
 
