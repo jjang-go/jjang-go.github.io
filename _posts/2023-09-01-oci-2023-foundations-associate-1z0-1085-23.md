@@ -18,7 +18,9 @@ mermaid: true
 알아보고 응시해봤어요. 우선 OCI자격증은 아래와 같이 3단계가 있는듯하네요.
 
 ![Foundations_Associate](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Foundations_Associate.png?raw=true)
+
 ![Associate](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Associate.png?raw=true)
+
 ![Professional](https://github.com/jjang-go/jjang-go.github.io/blob/main/assets/img/post/oci-2023-foundations-associate-1z0-1085-23/Professional.png?raw=true)
 
 저는 순서대로 하기 위해 **Foundations Associate**을 먼저 응시했어요.
