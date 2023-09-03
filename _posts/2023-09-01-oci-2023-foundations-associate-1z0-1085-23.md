@@ -1,6 +1,6 @@
 ---
 title: "[자격증] OCI Foundations Associate (2023) 후기"
-author: tykim
+author: "jjang-go"
 date: 2023-09-02 00:08:00 +0900
 # last_modified_at: 2023-09-02 00:08:01 +0900
 categories: [자격증, OCI]
