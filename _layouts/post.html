@@ -8,7 +8,6 @@ tail_includes:
   - post-nav
   - comments
 ---
-
 {% include lang.html %}
 
 <article class="px-1">
@@ -18,6 +17,7 @@ tail_includes:
     <div class="post-meta text-muted">
       <!-- published date -->
       <span>
+        {{ site.theme_mode }}
         {{ site.data.locales[lang].post.posted }}
         {% include datetime.html date=page.date tooltip=true lang=lang %}
       </span>
@@ -146,4 +146,12 @@ tail_includes:
     <!-- .post-tail-bottom -->
   </div>
   <!-- div.post-tail-wrapper -->
+  <script
+    src="https://utteranc.es/client.js"
+    repo="jjang-go/jjang-go.github.io"
+    issue-term="pathname"
+    theme="github-dark"
+    crossorigin="anonymous"
+    async
+  ></script>
 </article>
