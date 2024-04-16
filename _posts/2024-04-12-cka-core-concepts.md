@@ -6,7 +6,7 @@ categories: [자격증, Cloud, CKA]
 tags: [docker, kubernetes, k8s, cka, 자격증]
 ---
 
-# CKA 자격증
+# Core Concepts
 
 강의 : Udemy - [Certified Kubernetes Administrator (CKA) with Practice Tests](https://www.udemy.com/share/101Xtg3@i_PWod_lMIUhcyrSIngElFmre9WNNhaMnXwaoIwwianw3_xF22Gsc1h4Z6SsVULmiA==/)
 
