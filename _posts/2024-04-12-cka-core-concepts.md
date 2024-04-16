@@ -1,12 +1,14 @@
 ---
-title: CKA 정리1
+title: CKA 정리(Core concepts)
 date: 2023-04-14 00:00:00 +0900
-last_modified_at: 2024-04-15 00:00:00 +0900
+last_modified_at: 2024-04-16 16:50:00 +0900
 categories: [자격증, Cloud, CKA]
 tags: [docker, kubernetes, k8s, cka, 자격증]
 ---
 
 # CKA 자격증
+
+강의 : Udemy - [Certified Kubernetes Administrator (CKA) with Practice Tests](https://www.udemy.com/share/101Xtg3@i_PWod_lMIUhcyrSIngElFmre9WNNhaMnXwaoIwwianw3_xF22Gsc1h4Z6SsVULmiA==/)
 
 ## Cluster Architecture
 
@@ -440,6 +442,7 @@ spec:
   ```
 
 #### Kubectl Apply
+
 - 로컬 구성파일과 k8s의 라이브 개체를 정의
 - create, replace명령 대신 kubectl apply를 사용하여 객체를 관리하는 명령을 적용
 - 개체가 아직 존재하지 않는 경우 개체를 만들 수 있을만큼 지능적
