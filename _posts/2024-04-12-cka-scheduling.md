@@ -219,6 +219,7 @@ spec:
   - cpu 초과 시 시스템이 cpu를 조절해 지정된 한도를 넘지 않도록 함
   - 메모리는 초과 시 OOM(Out of Memory)에러로 종료 됨
     ```yaml
+    # pod-definition.yaml
     apiVersion: v1
     kind: Pod
     metadata:
@@ -239,3 +240,81 @@ spec:
               memory: "2Gi"
               cpu: 2
     ```
+
+### DaemonSet
+
+- ReplicaSet이랑 같음
+- 여러 개의 instance pod를 배포하도록 도와줌
+- 클러스터의 node마다 pod를 하나씩 실행
+- 클러스터에 새 node가 추가될 때마다 pod복제본이 자동으로 해당 node에 추가됨
+- node를 제거 시 pod도 같이 제거 됨
+- DaemonSet 생성방법은 ReplicaSet 생성방법과 비슷
+  - DaemonSet
+    ```yaml
+    apiVersion: apps/v1
+    kind: DaemonSet
+    metadata:
+      name: monitoring-daemon
+    spec:
+      selector:
+        matchLabels:
+          app: monitoring-agent
+      template:
+        meatadata:
+          labels:
+            app: monitoring-agent
+        spec:
+          containers:
+            - name: monitoring-agent
+              image: monitoring-agent
+    ```
+  - ReplicaSet
+    ```yaml
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    metadata:
+      name: monitoring-daemon
+    spec:
+      selector:
+        matchLabels:
+          app: monitoring-agent
+      template:
+        meatadata:
+          labels:
+            app: monitoring-agent
+        spec:
+          containers:
+            - name: monitoring-agent
+              image: monitoring-agent
+    ```
+
+### Static Pod
+
+- kubelet은 node를 독립적으로 관리 가능
+- pod에 관한 정보를 저장하는 서버디렉토리 : `/etc/kubernetes/manifests`
+- kubelet이 스스로 만든 pod는 api서버의 간섭이나 나머지 k8s cluster 구성 요소의 간섭 없음
+- ReplicaSet이나 deployment를 생성 불가능
+- pod이름 뒤 node의 이름이 붙으면 static pod임
+- `ps -ef | grep kubelet`명령을 이용해서 kubelet의 config파일을 열어서 `staticPodPath` 확인
+
+  ```shell
+  controlplane ~ ✖ ps -ef | grep kubelet
+  root        4406       1  2 03:30 ?        00:00:25 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+  root       13593   11716  0 03:48 pts/0    00:00:00 grep --color=auto kubelet
+
+  controlplane ~ ➜  cat /var/lib/kubelet/config.yaml
+  apiVersion: kubelet.config.k8s.io/v1beta1
+  ...
+  ...
+  staticPodPath: /etc/kubernetes/manifests
+  ...
+  ```
+
+### Multiple Schedulers
+
+- k8s cluster는 한번에 여러 스케줄러를 가질 수 있음
+- 여러개일 경우 이름이 반드시 달라야함 - 각각의 스케줄러를 구분 가능하도록
+- 스케줄러 설정 파일을 통해 각각의 스케줄러의 이름을 설정함
+- 이름을 지정하지 않는다면 `default-scheduler`
+- pod 생성 시 `schedulerName`를 통해 스케줄러를 지정가능
+- 생성 중 문제 발생 시 `kubectl logs <schedulerName>`명령어를 통해 확인 가능
