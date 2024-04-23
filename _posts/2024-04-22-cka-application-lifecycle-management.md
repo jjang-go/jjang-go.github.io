@@ -1,7 +1,7 @@
 ---
 title: CKA 정리(Application Lifecycle Management)
 date: 2023-04-22 11:33:00 +0900
-# last_modified_at: 2024-04-21 23:29:00 +0900
+last_modified_at: 2024-04-23 23:25:00 +0900
 categories: [자격증, Cloud, CKA]
 tags: [docker, kubernetes, k8s, cka, 자격증]
 ---
@@ -358,3 +358,91 @@ kubectl rollout undo deployment/myapp-deployment
           - secretRef:
               name: app-secret
   ```
+
+  - env
+    ```yaml
+    envFrom:
+      - secretRef:
+          name: app-config
+    ```
+  - singe env
+    ```yaml
+    env:
+      - name: DB_Password
+        valueFrom:
+          secretKeyRef:
+            name: app-secret
+            key: DB_Password
+    ```
+  - volume
+
+    ```yaml
+    volumes:
+      - name: app-secret-volume
+        secret:
+          secretName: app-secret
+    ```
+
+    - Secret in Pods as Volumes
+
+      ```shell
+      # Inside the Container
+      ls /opt/app-secret-volumes
+
+      cat /opt/app-secret-volumes/DB_Password
+      ```
+
+## Multi-Container Pods
+
+- 같은 네트워크 공간을 공유
+- 서로 localhost로 통신 가능
+- 동일 저장소 볼륨을 사용하여 동일하게 접근 가능
+- pod사이에 볼륨 공유나 서비스 설정 x
+- pod구성 시 container만 추가하면 됨
+  ```yaml
+  # pod-definitionmyaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: simple-webapp
+    labels:
+      name: simple-webapp
+  spec:
+  contianers:
+    - name: simple-webapp
+      image: simple-webapp
+      ports:
+        - containerPort: 8080
+    # multi container
+    - name: log-agent
+      image: log-agent
+  ```
+
+### initContainer
+
+- Multi Container pod에서 각 container는 POD의 수명 주기 동안 활성 상태로 유지되는 프로세스를 실행해야 함
+- container가 하나라도 실패하면 pod 다시시작됨
+- pod가 처음 생성될 때 한 번만 실행되는 작업
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: myapp-container
+      image: busybox:1.28
+      command: ["sh", "-c", "echo The app is running! && sleep 3600"]
+  initContainers:
+    - name: init-myservice
+      image: busybox
+      command:
+        [
+          "sh",
+          "-c",
+          "git clone <some-repository-that-will-be-used-by-application>; done;"
+        ]
+```
