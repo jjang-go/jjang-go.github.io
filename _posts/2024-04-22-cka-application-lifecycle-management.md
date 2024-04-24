@@ -1,7 +1,7 @@
 ---
 title: CKA 정리(Application Lifecycle Management)
 date: 2023-04-22 11:33:00 +0900
-last_modified_at: 2024-04-23 23:25:00 +0900
+last_modified_at: 2024-04-24 16:05:00 +0900
 categories: [자격증, Cloud, CKA]
 tags: [docker, kubernetes, k8s, cka, 자격증]
 ---
