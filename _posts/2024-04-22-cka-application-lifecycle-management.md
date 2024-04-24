@@ -446,3 +446,8 @@ spec:
           "git clone <some-repository-that-will-be-used-by-application>; done;"
         ]
 ```
+
+## Self Healing Applications
+
+- k8s는 ReplicaSet 및 복제 컨트롤러를 통해 자가 복구 애플리케이션을 지원함
+- 복제 컨트롤러는 POD 내의 애플리케이션이 충돌할 때 POD가 자동으로 다시 생성되도록 하는 데 도움이 됨
