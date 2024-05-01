@@ -2,7 +2,7 @@
 title: CKA 정리(Core concepts)
 date: 2023-04-14 00:00:00 +0900
 last_modified_at: 2024-04-16 16:50:00 +0900
-categories: [Cloud, 자격증, CKA]
+categories: [자격증, Cloud, CKA]
 tags: [docker, kubernetes, k8s, cka, 자격증]
 ---
 
