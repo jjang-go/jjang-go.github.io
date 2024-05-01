@@ -2,7 +2,7 @@
 title: CKA 정리(Scheduling)
 date: 2023-04-16 16:52:00 +0900
 last_modified_at: 2024-04-21 23:29:00 +0900
-categories: [자격증, Cloud, CKA]
+categories: [Cloud, 자격증, CKA]
 tags: [docker, kubernetes, k8s, cka, 자격증]
 ---
 
