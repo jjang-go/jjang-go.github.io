@@ -8,7 +8,7 @@ tags: [aws, cicd, devops]
 
 itwill - [AWS DevOps](https://www.e-itwill.com/course/course_view.jsp?id=437&cid=12&ch=course)
 
-# AWS 회원가입과 서버 임대, 접속방식
+# AWS 배포 기본 지식 학습
 
 ## 학습 목표(AWS)
 
